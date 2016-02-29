@@ -1,0 +1,59 @@
+extends layouts/inicio
+
+append mainVars
+	- currentPage = 'index'
+	- pageTitle = 'Compart.io'
+	- metaDesc = 'Descripción corta.'
+	- metaDescLog = 'Descripción larga.'
+
+block content
+	header#header-home
+		div.background1
+			div.background2
+				.col1
+					h1
+						span Compartio
+					p
+						strong ¡Bienvenido!
+						br
+						| Este es un espacio donde buscar lo que necesitas y dar lo que te sobra.
+					select.not-selected
+						option Elije tu ciudad
+						option Albacete
+						option Córdoba
+				.col2
+					#userpanel
+						.not-logged
+							a(href="#") Entrar
+							a(href="#") Crear cuenta
+	
+	footer
+		div
+			.col1
+				ul.social
+					li.facebook
+						a(href="#")
+							span
+							span Facebook
+					li.twitter
+						a(href="#")
+							span
+							span Twitter
+				ul.corp
+					li
+						a(href="#")
+							| El proyecto
+					li
+						a(href="#")
+							| Contacto
+			.col2
+				ul
+					li
+						a(href="#").facebook
+							| Política de confidencialidad
+					li
+						a(href="#").facebook
+							| Aviso legal
+					li
+						a(href="#").facebook
+							| Política de cookies

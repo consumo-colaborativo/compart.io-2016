@@ -1,0 +1,9 @@
+
+<div ng-click="dropdownChange" ng-class="{ open: listVisible }" class="select">
+  <div ng-click="show();" class="button"><span ng-if="!isPlaceholder">{{display}}<span></span></span><span ng-if="isPlaceholder">{{placeholder}}<span></span></span></div>
+  <div class="dropdown nano">
+    <ul class="nano-content">
+      <li ng-repeat="item in list" ng-click="select(item)" ng-class="{ selected: isSelected(item) }">{{property !== undefined ? item[property] : item}}</li>
+    </ul>
+  </div>
+</div>
