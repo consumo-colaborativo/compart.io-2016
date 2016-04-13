@@ -25,8 +25,7 @@ module.exports = {
 
     // Add a reference to User
     published: {
-      collection: 'user',
-      via: 'comments'
+      model: 'user'      
     }
 
   }
