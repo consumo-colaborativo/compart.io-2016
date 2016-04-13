@@ -1,8 +1,7 @@
 {
-  "name": "compartio",
-  "private": true,
-  "version": "0.0.0",
-  "description": "a Sails application",
+  "name": "compart.io",
+  "version": "0.0.2",
+  "description": "Plataforma online de consumo colaborativo, abierta, libre y sin fines comerciales, desarrollada por personas voluntarias",
   "keywords": [],
   "dependencies": {
     "ejs": "~0.8.4",
@@ -32,8 +31,14 @@
   "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/alvarosaco/compartio.git"
+    "url": "git://github.com/consumo-colaborativo/compart.io-2016"
   },
-  "author": "alvarosaco",
+  "author": {
+    "name": "compart.io",
+    "email": "hola@compart.io"
+  },
+  "website": {
+    "url": "compart.io"
+  },
   "license": ""
 }
