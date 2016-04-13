@@ -1,6 +1,6 @@
 // Donation.js
 module.exports = {
-  connection: 'compartioMySQL',
+  connection: 'localDiskDb',
   attributes: {
     donation_date: {
       type: 'datetime'

@@ -7,7 +7,7 @@
 
 module.exports = {
 
-	connection: 'compartioMongoDB',
+	connection: 'localDiskDb',
 	attributes: {
     	username: {
     		type: 'string',
@@ -59,7 +59,8 @@ module.exports = {
 			// Add a reference to Compartios needed
     	needs: {
       	collection: 'compartio',
-      	via: 'needers'
+      	via: 'needers',
+        dominant: true
     	}
 
 

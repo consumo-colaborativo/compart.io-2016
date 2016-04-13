@@ -1,6 +1,6 @@
 // Compartio.js
 module.exports = {
-  connection: 'compartioMySQL',
+  connection: 'localDiskDb',
   attributes: {
     name: {
       type: 'string'
