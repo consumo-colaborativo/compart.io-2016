@@ -1,1 +1,3 @@
-# compart.io-2016
+# compartio
+
+a [Sails](http://sailsjs.org) application
