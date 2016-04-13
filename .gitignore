@@ -1,4 +1,5 @@
 .DS_Store
+.tmp/
 _frontend/bower_components
 _frontend/node_modules
 _frontend/ftpconfig.json
