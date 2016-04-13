@@ -23,10 +23,10 @@ module.exports.connections = {
 
   compartioMongoDB: {
     adapter: 'sails-mongo',
-    user: '',
-    host: '',
-    password: '',
-    database: ''
+    user: 'usuario',
+    host: 'localhost',
+    password: 'nolose',
+    database: 'nolose'
   },
 
   /***************************************************************************
