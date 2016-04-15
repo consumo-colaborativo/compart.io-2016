@@ -3,7 +3,8 @@ module.exports = {
   connection: 'localDiskDb',
   attributes: {
     name: {
-      type: 'string'
+      type: 'string',
+      required: true
     },
     description: {
       type: 'text'
@@ -16,13 +17,7 @@ module.exports = {
     },
     url_image: {
       type: 'string'
-    },
-    creation_date: {
-      type: 'datetime'
-    },
-    update_date: {
-      type: 'datetime'
-    },
+    },    
     status: {
       type: 'string',
       enum: ['publicado', 'entregado', 'cancelado']
