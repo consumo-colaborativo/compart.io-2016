@@ -1,6 +1,7 @@
 // Donation.js
 module.exports = {
   connection: 'localDiskDb',
+  schema: true,
   attributes: {
     donation_date: {
       type: 'datetime'

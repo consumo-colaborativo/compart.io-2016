@@ -1,6 +1,8 @@
 // Compartio.js
 module.exports = {
+
   connection: 'localDiskDb',
+  schema: true,
   attributes: {
     name: {
       type: 'string',

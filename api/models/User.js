@@ -8,6 +8,7 @@
 module.exports = {
 
 	connection: 'localDiskDb',
+    schema: true,
 	attributes: {
     	username: {
     		type: 'string',
