@@ -6,7 +6,7 @@
 */
 
 module.exports = {
-
+  connection: 'localDiskDb',
   schema: true,
   attributes: {
     date: {
