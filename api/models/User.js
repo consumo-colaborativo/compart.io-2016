@@ -10,69 +10,66 @@ module.exports = {
 	connection: 'localDiskDb',
     schema: true,
 		attributes: {
-    	username: {
-    		type: 'string',
-				unique: true
-    	},
-    	password: {
-    		type: 'string',
-				required: true
-    	},
-    	email: {
-    		type: 'string',
-				email: true,
-				required: true,
-				unique: true
-    	},
-    	aboutme: {
-    		type: 'string'
-    	},
-    	avatar_url: {
-    		type: 'string'
-    	},
-    	user_type: {
-    		type: 'string'
-    	},
-    	screen_name: {
-    		type: 'string'
-    	},
-    	karma: {
-    		type: 'integer'
-    	},
-    	last_sign_in_stamp: {
-    		type: 'integer'
-    	},
-    	facebook_access_token: {
-    		type: 'integer'
-    	},
-    	google_access_token: {
-    		type: 'integer'
-    	},
+    		username: {
+					type: 'string',
+					unique: true
+				},
+				password: {
+    			type: 'string',
+					required: true
+    		},
+    		email: {
+    			type: 'string',
+					email: true,
+					required: true,
+					unique: true
+				},
+				aboutme: {
+    			type: 'string'
+    		},
+    		avatar_url: {
+    			type: 'string'
+    		},
+    		user_type: {
+    			type: 'string'
+    		},
+    		screen_name: {
+    			type: 'string'
+    		},
+    		karma: {
+    			type: 'integer'
+    		},
+    		last_sign_in_stamp: {
+    			type: 'integer'
+    		},
+    		facebook_access_token: {
+    			type: 'integer'
+    		},
+    		google_access_token: {
+    			type: 'integer'
+    		},
 
-			// Add a reference to Compartios
-    	compartios: {
-      	collection: 'compartio',
-      	via: 'publisher'
-    	},
-			// Add a reference to Comments
-    	comments: {
-      	collection: 'comment',
-      	via: 'published'
-    	},
+				// Add a reference to Compartios
+    		compartios: {
+      		collection: 'compartio',
+      		via: 'publisher'
+    		},
+				// Add a reference to Comments
+    		comments: {
+      		collection: 'comment',
+      		via: 'published'
+    		},
+				// Add a reference to Compartios needed
+    		needs: {
+      		collection: 'compartio',
+      		via: 'needers',
+        	dominant: true
+    		},
 
-			// Add a reference to Compartios needed
-    	needs: {
-      	collection: 'compartio',
-      	via: 'needers',
-        dominant: true
-    	},
-
-			toJSON: function() {
-      	var obj = this.toObject();
-      	delete obj.password;
-      	return obj;
-    	}
-
-
-	}
+				toJSON: function() {
+      		var obj = this.toObject();
+      		delete obj.password;
+      		return obj;
+    		}
+			}
 };
