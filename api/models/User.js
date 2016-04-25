@@ -9,13 +9,14 @@ module.exports = {
 
 	connection: 'localDiskDb',
     schema: true,
-	attributes: {
+		attributes: {
     	username: {
     		type: 'string',
 				unique: true
     	},
     	password: {
-    		type: 'string'
+    		type: 'string',
+				required: true
     	},
     	email: {
     		type: 'string',
@@ -64,6 +65,12 @@ module.exports = {
       	collection: 'compartio',
       	via: 'needers',
         dominant: true
+    	},
+
+			toJSON: function() {
+      	var obj = this.toObject();
+      	delete obj.password;
+      	return obj;
     	}
 
 
