@@ -11,7 +11,22 @@
 
 module.exports.bootstrap = function(cb) {
 
+  console.log('Hello World!');
+
+  Compartio.count().exec(function(err, numCompartios) {
+    if (err) {
+      return cb(err);
+    }
+    if (numCompartios > 0) {
+      console.log('Número de compartios: ', numCompartios);
+      return cb();
+    }
+    // No records in the compartio model
+    console.log('No hay ningún compartio.');
+    return cb();
+  });
+
   // It's very important to trigger this callback method when you are finished
   // with the bootstrap!  (otherwise your server will never lift, since it's waiting on the bootstrap)
-  cb();
+  //cb();
 };
