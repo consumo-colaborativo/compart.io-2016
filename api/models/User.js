@@ -49,6 +49,14 @@ module.exports = {
           type: 'integer'
         },
 
+        admin:{
+          type: 'boolean'
+        },
+
+        banned:{
+          type: 'boolean'
+        },
+
         // Add a reference to Compartios
         compartios: {
           collection: 'compartio',
